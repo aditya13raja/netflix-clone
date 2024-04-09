@@ -2,6 +2,16 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# Things done so far:
+- Create React App
+- Configured Tailwind CSS
+- Header
+- Routing of the app
+- Login Form
+- Sign Up Form
+- Form Validation (can be done using state variable or using "useRef" hook)
+- useRef hook learned
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -68,3 +78,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
