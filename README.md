@@ -2,6 +2,8 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Hosting URL: https://netflix-clone-4b960.web.app
+
 # Things done so far:
 - Create React App
 - Configured Tailwind CSS
@@ -11,6 +13,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - Sign Up Form
 - Form Validation (can be done using state variable or using "useRef" hook)
 - useRef hook learned
+- Firebase setup
+- Deploying app on firebase
+- Create a Sign Up use account
 
 ## Available Scripts
 
