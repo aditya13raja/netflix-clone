@@ -1,12 +1,21 @@
 import React, {useRef, useState} from 'react';
 import Header from "./Header";
 import {checkValidData} from "../utils/validate";
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+import {
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  updateProfile
+} from "firebase/auth";
 import { auth } from "../utils/firebase";
+import {useNavigate} from "react-router-dom";
+import {useDispatch} from "react-redux";
+import {addUser} from "../utils/userSlice";
 
 function Login() {
   const [isSignInForm, setIsSignInForm] = useState(true);
   const [errorMessage, setErrorMessage] = useState(null);
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   // creating "Reference" for email and password
   const email = useRef(null);
@@ -18,6 +27,7 @@ function Login() {
     setErrorMessage(message);
 
     if (message) return;
+
     if(!isSignInForm)  {
       createUserWithEmailAndPassword(
         auth,
@@ -27,9 +37,26 @@ function Login() {
         .then((userCredential) => {
           // Signed up
           const user = userCredential.user;
-          console.log(user);
-          // ...
+
+          // to update user profile
+          updateProfile(user , {
+            displayName: name.current.value,
+            photoURL: "https://wallpapers.com/images/high/netflix-profile-pictures-1000-x-1000-88wkdmjrorckekha.webp"
+          }).then(() => {
+            // Profile updated!
+            const {uid, email, displayName, photoURL} = auth.currentUser;
+            dispatch(addUser({
+              uid: uid,
+              email: email,
+              displayName: displayName,
+              photoURL: photoURL
+            }));
+            navigate('/browse');
+          }).catch((error) => {
+            setErrorMessage(error.message);
+          });
         })
+
         .catch((error) => {
           const errorCode = error.code;
           const errorMessage = error.message;
@@ -42,7 +69,7 @@ function Login() {
           // Signed in
           const user = userCredential.user;
           console.log(user);
-          // ...
+          navigate('/browse');
         })
         .catch((error) => {
           const errorCode = error.code;

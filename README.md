@@ -16,6 +16,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - Firebase setup
 - Deploying app on firebase
 - Create a Sign Up use account
+- Implement Sign In user API
+- Created Redux store with userSlice
+- Implemented Sign Out
+- Update Profile
+
 
 ## Available Scripts
 
