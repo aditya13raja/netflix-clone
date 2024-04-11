@@ -20,6 +20,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - Created Redux store with userSlice
 - Implemented Sign Out
 - Update Profile
+- BugFix: Sign up user displayName and ProfilePic(not done yet)
+- BugFix: If user is not logged in then redirect /browse to Login and vice versa
+- Unsubscribe to onAuthStateChanged callback
+- Add hardcoded values to the constants file
 
 
 ## Available Scripts

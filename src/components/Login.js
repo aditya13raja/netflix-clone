@@ -1,4 +1,4 @@
-import React, {useRef, useState} from 'react';
+import React, { useRef, useState} from 'react';
 import Header from "./Header";
 import {checkValidData} from "../utils/validate";
 import {
@@ -7,14 +7,13 @@ import {
   updateProfile
 } from "firebase/auth";
 import { auth } from "../utils/firebase";
-import {useNavigate} from "react-router-dom";
 import {useDispatch} from "react-redux";
 import {addUser} from "../utils/userSlice";
+import {USER_AVATAR} from "../utils/constants";
 
 function Login() {
   const [isSignInForm, setIsSignInForm] = useState(true);
   const [errorMessage, setErrorMessage] = useState(null);
-  const navigate = useNavigate();
   const dispatch = useDispatch();
 
   // creating "Reference" for email and password
@@ -41,7 +40,7 @@ function Login() {
           // to update user profile
           updateProfile(user , {
             displayName: name.current.value,
-            photoURL: "https://wallpapers.com/images/high/netflix-profile-pictures-1000-x-1000-88wkdmjrorckekha.webp"
+            photoURL: USER_AVATAR
           }).then(() => {
             // Profile updated!
             const {uid, email, displayName, photoURL} = auth.currentUser;
@@ -51,7 +50,6 @@ function Login() {
               displayName: displayName,
               photoURL: photoURL
             }));
-            navigate('/browse');
           }).catch((error) => {
             setErrorMessage(error.message);
           });
@@ -68,13 +66,11 @@ function Login() {
         .then((userCredential) => {
           // Signed in
           const user = userCredential.user;
-          console.log(user);
-          navigate('/browse');
         })
         .catch((error) => {
           const errorCode = error.code;
           const errorMessage = error.message;
-          console.log(errorCode + "-" + errorMessage);
+          setErrorMessage(errorCode + "-" + errorMessage);
         });
 
     }
