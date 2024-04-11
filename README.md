@@ -24,6 +24,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - BugFix: If user is not logged in then redirect /browse to Login and vice versa
 - Unsubscribe to onAuthStateChanged callback
 - Add hardcoded values to the constants file
+- Register TMDB API & create an app to get access token
+- Get data from TMDB now playing movies list API
 
 
 ## Available Scripts
