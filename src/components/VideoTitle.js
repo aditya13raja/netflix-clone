@@ -1,9 +1,12 @@
-
-
-const VideoTitle = () => {
+const VideoTitle = ({title, overview}) => {
   return (
-    <div>
-
+    <div className="pt-36 px-12">
+      <h1 className="text-6xl font-bold">{title}</h1>
+      <p className="py-6 text-lg w-1/4">{overview}</p>
+      <div>
+        <button className="bg-gray-600 text-white p-2 px-10 text-xl bg-opacity-50 rounded-lg"> Play</button>
+        <button className="mx-4 bg-gray-600 text-white p-2 px-10 text-xl bg-opacity-50 rounded-lg"> More Info</button>
+      </div>
     </div>
   );
 };
