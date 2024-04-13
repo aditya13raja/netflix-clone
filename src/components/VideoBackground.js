@@ -6,15 +6,14 @@ const VideoBackground = () => {
   useMovieTrailer();
 
   if (!trailerVideo) return;
-
+// todo: remove youtube controls from video
   return (
     <div className="w-screen aspect-video">
       <iframe
         className="w-[100%] h-[100%] "
-        src={"https://www.youtube.com/embed/" + trailerVideo.key + "?autoplay=1&mute=1&loop-1&playlist=" + trailerVideo.key}
+        src={"https://www.youtube.com/embed/" + trailerVideo.key + "?autoplay=1&mute=1&loop-1&controls=0&rel=0&playlist=" + trailerVideo.key}
         title="YouTube video player"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+        referrerPolicy="strict-origin-when-cross-origin" ></iframe>
     </div>
   );
 };

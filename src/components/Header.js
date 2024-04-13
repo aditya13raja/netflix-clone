@@ -42,6 +42,7 @@ function Header() {
     });
     return () => unsubscribe();
   }, []);
+  // TODO: Make logo(photoURL) working and visible in header
 
   return (
     <div className="absolute w-screen px-8 py-2 bg-gradient-to-b from-black z-40 flex justify-between">
@@ -51,11 +52,6 @@ function Header() {
         alt="logo"/>
       {user && (
         <div className="flex p-4">
-          <img
-            className="w-12 h-12 pr-2"
-            alt="user"
-            src={user.photoURL}
-          />
           <button onClick={handleSignOut} className="font-bold text-white">(Sign Out)</button>
         </div>
       )}
