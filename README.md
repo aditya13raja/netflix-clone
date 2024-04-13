@@ -26,6 +26,14 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - Add hardcoded values to the constants file
 - Register TMDB API & create an app to get access token
 - Get data from TMDB now playing movies list API 
+- Custom hook for now playing
+- Create movieSlice
+- Update store with movie data
+- Planning for MainContainer & SecondaryContainer
+- Fetch data for trailer video
+- Update store with trailer video data
+- Embedded youtube video and made it autoplay, mute and playing in self-loop
+- Added tailwind classes to make MainContainer look better
 
 
 ## Available Scripts

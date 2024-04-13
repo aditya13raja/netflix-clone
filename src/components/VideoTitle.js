@@ -1,11 +1,11 @@
 const VideoTitle = ({title, overview}) => {
   return (
-    <div className="pt-36 px-12">
+    <div className="pt-[15%] px-12 absolute text-white bg-gradient-to-r from-black w-screen aspect-video">
       <h1 className="text-6xl font-bold">{title}</h1>
       <p className="py-6 text-lg w-1/4">{overview}</p>
       <div>
-        <button className="bg-gray-600 text-white p-2 px-10 text-xl bg-opacity-50 rounded-lg"> Play</button>
-        <button className="mx-4 bg-gray-600 text-white p-2 px-10 text-xl bg-opacity-50 rounded-lg"> More Info</button>
+        <button className="bg-white text-black p-2 px-10 text-xl hover:bg-opacity-80 rounded-lg"> Play</button>
+        <button className="mx-4 bg-gray-500 text-white p-2 px-10 text-xl bg-opacity-80 hover:bg-opacity-50 rounded-lg"> More Info</button>
       </div>
     </div>
   );
