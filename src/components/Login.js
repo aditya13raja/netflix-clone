@@ -16,7 +16,6 @@ const  Login = () => {
   const [errorMessage, setErrorMessage] = useState(null);
   const dispatch = useDispatch();
 
-  // creating "Reference" for email and password
   const email = useRef(null);
   const password = useRef(null);
   const name = useRef(null);
@@ -27,6 +26,7 @@ const  Login = () => {
 
     if (message) return;
 
+    // create new user
     if(!isSignInForm)  {
       createUserWithEmailAndPassword(
         auth,
@@ -36,6 +36,7 @@ const  Login = () => {
         .then((userCredential) => {
           // Signed up
           const user = userCredential.user;
+          console.log(user);
 
           // to update user profile
           updateProfile(user , {

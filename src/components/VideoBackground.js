@@ -6,7 +6,6 @@ const VideoBackground = () => {
   useMovieTrailer();
 
   if (!trailerVideo) return;
-// todo: remove youtube controls from video
   return (
     <div className="w-screen aspect-video">
       <iframe
