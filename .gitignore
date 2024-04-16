@@ -23,3 +23,6 @@ yarn-error.log*
 # added by me
 /.idea
 /.firebase
+
+# for securing api keys
+/.env
