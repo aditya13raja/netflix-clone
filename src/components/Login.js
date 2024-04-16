@@ -97,18 +97,18 @@ const  Login = () => {
             ref={name}
             placeholder="Full Name"
             type="text"
-            className="p-2 my-4 w-full bg-gray-700"/>
+            className="p-2 my-4 w-full bg-gray-700 text-gray-100"/>
         )}
         <input
           ref={email}
           placeholder="Email Address"
           type="text"
-          className="p-2 my-4 w-full bg-gray-700" />
+          className="p-2 my-4 w-full bg-gray-700 text-gray-100" />
         <input
           ref={password}
           placeholder="Password"
           type="password"
-          className="p-2 my-4 w-full bg-gray-700" />
+          className="p-2 my-4 w-full bg-gray-700 text-gray-100" />
         <p className="text-red-800 font-bold text-lg py-2">{errorMessage}</p>
         <button className="p-4 my-6 bg-red-700 w-full rounded-lg" onClick={handleButtonClick}>
           {isSignInForm ? "Sign In" : "Sign Up"}
