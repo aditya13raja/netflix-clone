@@ -18,7 +18,6 @@ const GptSearchBar = () => {
         '&include_adult=false&language=en-US&page=1',
         API_OPTIONS);
       const json = await data.json();
-
       return json.results;
     }
 
@@ -48,7 +47,7 @@ const GptSearchBar = () => {
   return (
     <div className="pt-[10%] flex justify-center ">
       <form
-        className="bg-gray-900 w-3/5 grid grid-cols-12 p-2 rounded-xl"
+        className="bg-gray-900 w-screen m-2 md:w-3/5 grid grid-cols-12 p-2 rounded-xl"
         onSubmit={(e) => {e.preventDefault();}}
       >
         <input

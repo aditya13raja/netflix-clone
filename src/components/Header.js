@@ -50,9 +50,9 @@ function Header() {
   }, [])
 
   return (
-    <div className="absolute w-screen px-8 py-2 bg-gradient-to-b from-black z-40 flex justify-between">
+    <div className="absolute w-screen px-8 py-2 bg-gradient-to-b from-black z-40 flex flex-col md:flex-row justify-between">
       <img
-        className="w-48"
+        className="w-48 mx-auto md:mx-0"
         src={LOGO}
         alt="logo"/>
       {user && (
@@ -69,7 +69,7 @@ function Header() {
             alt="profile"/>
           <button
             onClick={handleSignOut}
-            className="font-bold text-white pl-2">
+            className="py-2 px-4 mx-8 my-2  bg-green-900 opacity-90 text-white font-bold rounded-lg">
             Sign Out
           </button>
         </div>
