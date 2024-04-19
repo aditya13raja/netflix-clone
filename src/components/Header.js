@@ -64,7 +64,7 @@ function Header() {
             {gptSearchButton ? "Homepage" : "GPT Search" }
           </button>
           <img
-            className="w-12 h-12"
+            className="w-12 mt-2 h-12"
             src={user.photoURL}
             alt="profile"/>
           <button

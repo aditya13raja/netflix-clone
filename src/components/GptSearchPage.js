@@ -12,7 +12,7 @@ const GptSearchPage = () => {
           src={BG_URL}
           alt="background-img"/>
       </div>
-      <div className="pt-[30%] md:p-0">
+      <div className="pt-[40%] md:p-0">
         <GptSearchBar/>
         <GptMovieSuggestion/>
       </div>
